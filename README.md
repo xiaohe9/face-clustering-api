@@ -1,7 +1,5 @@
 # Face Clustering API
 
-> **Take-home assignment for Hung Hing Printing - AI Science Team**
->
 > Deploy a face clustering algorithm as a containerized API service.
 
 ---
@@ -80,7 +78,7 @@ Client Request (multipart/form-data with images)
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/face-clustering-api.git
+git clone https://github.com/xiaohe9/face-clustering-api.git
 cd face-clustering-api
 ```
 
@@ -268,8 +266,7 @@ face-clustering-api/
 │   ├── __init__.py              # Package init
 │   ├── main.py                  # FastAPI application & endpoints
 │   ├── face_clustering.py       # Core clustering engine
-│   ├── models.py                # Pydantic request/response models
-│   └── config.py                # Configuration settings
+│   └── models.py                # Pydantic request/response models
 ├── tests/
 │   ├── __init__.py
 │   └── test_api.py              # Automated API tests
@@ -443,4 +440,4 @@ python client_example/test_client.py --images ./photos/ --save results.json
 
 ## License
 
-This project is created as a technical assignment for Hung Hing Printing.
+Face Clustering API - RESTful service for face detection and clustering.
