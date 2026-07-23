@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  face-clustering-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: face-clustering-api:latest
+    container_name: face-clustering-api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - UVICORN_WORKERS=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
