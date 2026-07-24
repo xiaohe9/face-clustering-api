@@ -29,3 +29,5 @@ Thumbs.db
 output_clusters/
 clustered_output/
 event_photos/
+test_data/*.jpg
+test_data/*.png
